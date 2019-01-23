@@ -23,7 +23,10 @@ import { transducer } from 'rxjs-transducer';
 import { map, filter, reduce, skip, take } from 'rxjs/operators';
 
 // Works as standard array map and filter, but faster (only one iteration)
-const result = transducer(source)(map(word => word.toUpperCase()), filter(word => word.length > 2));
+const result = transducer(source)(
+  map(word => word.toUpperCase()),
+  filter(word => word.length > 2)
+);
 // result -> ['ABC', 'ABCD', 'ABCDE']
 
 // Note that results is always an array, even if the final operator
@@ -36,7 +39,12 @@ const result = transducer(source)(
 // result -> ['ABC-ABCD-ABCDE']
 
 // Works with infinte sequences too
-const result = transducer(integers())(map(i => i * 2), filter(i => i % 10 === 0), skip(10), take(5));
+const result = transducer(integers())(
+  map(i => i * 2),
+  filter(i => i % 10 === 0),
+  skip(10),
+  take(5)
+);
 // result -> [100, 110, 120, 130, 140]
 
 // Infinite sequence of integers from zero -> infinite
@@ -55,7 +63,10 @@ const { map, filter, reduce, take, skip } = require('rxjs/operators');
 const transducer = require('rxjs-transducer');
 const source = ['a', 'ab', 'abc', 'abcd', 'abcde'];
 
-const result = transducer(source)(map(word => word.toUpperCase()), filter(word => word.length > 2));
+const result = transducer(source)(
+  map(word => word.toUpperCase()),
+  filter(word => word.length > 2)
+);
 // result -> ['ABC', 'ABCD', 'ABCDE']
 ```
 
