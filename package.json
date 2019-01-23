@@ -1,9 +1,9 @@
 {
   "name": "rxjs-transducer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Transducer implementation leveraging RxJS operators to map, filter, reduce, take, skip on potentially infinite sequences",
-  "main": "index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/transducer.js",
+  "types": "dist/transducer.d.ts",
   "scripts": {
     "test:watch": "nodemon --ext ts --exec npm run test",
     "test": "ts-node node_modules/jasmine/bin/jasmine",
