@@ -1,0 +1,51 @@
+{
+  "name": "rxjs-transducer",
+  "version": "1.0.0",
+  "description": "Transducer implementation leveraging RxJS operators to map, filter, reduce, take, skip on potentially infinite sequences",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test:watch": "nodemon --ext ts --exec npm run test",
+    "test": "ts-node node_modules/jasmine/bin/jasmine",
+    "build": "tsc"
+  },
+  "files": [
+    "dist/transducer.d.ts",
+    "dist/transducer.js",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasmusvhansen/rxjs-transducer.git"
+  },
+  "keywords": [
+    "transducer",
+    "rxjs",
+    "map",
+    "filter",
+    "reduce",
+    "take",
+    "skip",
+    "lazy",
+    "infinite",
+    "array",
+    "sequence"
+  ],
+  "author": "Rasmus Vestergaard Hansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rasmusvhansen/rxjs-transducer/issues"
+  },
+  "homepage": "https://github.com/rasmusvhansen/rxjs-transducer#readme",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.7",
+    "jasmine": "^3.3.1",
+    "nodemon": "^1.18.9",
+    "rxjs": "^6.3.3",
+    "ts-node": "^8.0.1",
+    "typescript": "^3.2.4"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.3.3"
+  }
+}
