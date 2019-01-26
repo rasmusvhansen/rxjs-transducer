@@ -21,6 +21,7 @@ npm install rxjs-transducer --save
 ```typescript
 import { transducer } from 'rxjs-transducer';
 import { map, filter, reduce, skip, take } from 'rxjs/operators';
+const source = ['a', 'ab', 'abc', 'abcd', 'abcde'];
 
 // Works as standard array map and filter, but faster (only one iteration)
 const result = transducer(source)(
