@@ -61,7 +61,7 @@ function* integers() {
 
 ```javascript
 const { map, filter, reduce, take, skip } = require('rxjs/operators');
-const transducer = require('rxjs-transducer');
+const { transducer } = require('rxjs-transducer');
 const source = ['a', 'ab', 'abc', 'abcd', 'abcde'];
 
 const result = transducer(source)(
